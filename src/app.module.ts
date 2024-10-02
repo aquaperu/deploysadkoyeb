@@ -79,6 +79,7 @@ AuthModule,
 ObraModule,
 ValorizacionModule,
 PresupuestoModule,
+
 ],
   controllers: [AppController],
   providers: [AppService],

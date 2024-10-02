@@ -7,6 +7,7 @@ import { JwtService } from '@nestjs/jwt';
 
 import { IAuthRepository, IAUTH_REPOSITORY } from 'src/auth/patronAdapter/auth.interface.repository';
 import { GoogleDriveService } from '../../googledrivecasa/services/googledrive.service';
+import { GooglespreadsheetxlsService } from 'src/googledrivecasa/services/googlespreadsheetxls.service';
 
 
 @Injectable()
@@ -16,6 +17,7 @@ export class ObraService {
         @Inject(IAUTH_REPOSITORY) private authRepository:IAuthRepository,
         private readonly jwtService:JwtService,
         private readonly googleDriveService: GoogleDriveService,
+        private readonly googleSpreadService: GooglespreadsheetxlsService,
     ){}
     
     async creaObra(body: any)
