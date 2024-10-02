@@ -11,12 +11,9 @@ import { GoogledrivecasaModule } from './googledrivecasa/googledrivecasa.module'
 import { GoogleDriveConfig } from './googledrivecasa/types/googledriveconfig';
 import { DocsModule } from './docs/docs.module';
 import { DocsConfig } from './docs/types/docs.config';
-//import { ObraModule } from './obra/obra.module';
-//import { PresupuestoModule } from './presupuesto/presupuesto.module';
-//import { ValorizacionModule } from './valorizacion/valorizacion.module';
-//import { ObraModule } from './obra/obra.module';
-//import { ValorizacionModule } from './valorizacion/valorizacion.module';
-//import { PresupuestoModule } from './presupuesto/presupuesto.module';
+import { ObraModule } from './obra/obra.module';
+import { PresupuestoModule } from './presupuesto/presupuesto.module';
+import { ValorizacionModule } from './valorizacion/valorizacion.module';
 import { fixPathAssets } from './shared/toolbox/fixPath';
 
 
@@ -79,6 +76,9 @@ import { fixPathAssets } from './shared/toolbox/fixPath';
 ),
 ConfigModule.forRoot(),
 AuthModule,
+ObraModule,
+ValorizacionModule,
+PresupuestoModule,
 ],
   controllers: [AppController],
   providers: [AppService],
