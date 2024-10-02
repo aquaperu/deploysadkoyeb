@@ -6,14 +6,14 @@ import { HttpModule } from '@nestjs/axios';
 import { configLoader } from 'config-loader';
 import { envSchema } from 'env-schema';
 import { MongooseModule } from '@nestjs/mongoose';
-//import { AuthModule } from './auth/auth.module';
+import { AuthModule } from './auth/auth.module';
 import { GoogledrivecasaModule } from './googledrivecasa/googledrivecasa.module';
 import { GoogleDriveConfig } from './googledrivecasa/types/googledriveconfig';
+
 
 //import { ObraModule } from './obra/obra.module';
 //import { PresupuestoModule } from './presupuesto/presupuesto.module';
 //import { ValorizacionModule } from './valorizacion/valorizacion.module';
-//import { GoogledrivecasaModule } from './googledrivecasa/googledrivecasa.module';
 /*import { ObraModule } from './obra/obra.module';
 import { ValorizacionModule } from './valorizacion/valorizacion.module';
 import { PresupuestoModule } from './presupuesto/presupuesto.module';
@@ -75,6 +75,8 @@ import { DocsConfig } from './docs/types/docs.config';*/
   }as DocsConfig,
 
 ),*/
+ConfigModule.forRoot(),
+AuthModule,
 ],
   controllers: [AppController],
   providers: [AppService],
