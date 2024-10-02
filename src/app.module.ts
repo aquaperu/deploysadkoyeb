@@ -9,17 +9,16 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { AuthModule } from './auth/auth.module';
 import { GoogledrivecasaModule } from './googledrivecasa/googledrivecasa.module';
 import { GoogleDriveConfig } from './googledrivecasa/types/googledriveconfig';
-
-
+import { DocsModule } from './docs/docs.module';
+import { DocsConfig } from './docs/types/docs.config';
 //import { ObraModule } from './obra/obra.module';
 //import { PresupuestoModule } from './presupuesto/presupuesto.module';
 //import { ValorizacionModule } from './valorizacion/valorizacion.module';
-/*import { ObraModule } from './obra/obra.module';
-import { ValorizacionModule } from './valorizacion/valorizacion.module';
-import { PresupuestoModule } from './presupuesto/presupuesto.module';
-import { DocsModule } from './docs/docs.module';
+//import { ObraModule } from './obra/obra.module';
+//import { ValorizacionModule } from './valorizacion/valorizacion.module';
+//import { PresupuestoModule } from './presupuesto/presupuesto.module';
 import { fixPathAssets } from './shared/toolbox/fixPath';
-import { DocsConfig } from './docs/types/docs.config';*/
+
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -54,7 +53,7 @@ import { DocsConfig } from './docs/types/docs.config';*/
   }as GoogleDriveConfig,
   '1VDf6sK9Whc3SMwRgPMP9jl8KQ1b5lf7t',//carpeta base SAD
   ),
-  /*DocsModule.register({
+  DocsModule.register({
     //configuracion por defecto
     fontFile:fixPathAssets('AmoeraRegular.otf'),
     backgroundSeparatorFile:fixPathAssets('separadorv4.png'),
@@ -74,7 +73,7 @@ import { DocsConfig } from './docs/types/docs.config';*/
   
   }as DocsConfig,
 
-),*/
+),
 ConfigModule.forRoot(),
 AuthModule,
 ],
